@@ -10,6 +10,7 @@ import CertificationsSection from './components/sections/CertificationsSection';
 import GallerySection from './components/sections/GallerySection';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/layout/Footer';
+import { ThemeProvider } from './context/ThemeContext';
 import './styles/App.css';
 
 declare global {
@@ -23,42 +24,44 @@ declare global {
   }
 }
 
-const App: React.FC = () => {
+function App(): React.ReactElement {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <main className="pt-16">
-        <section id="home" className="section">
-          <HeroSection />
-        </section>
-        <section id="about" className="section">
-          <AboutSection />
-        </section>
-        <section id="experience" className="section">
-          <ExperienceSection />
-        </section>
-        <section id="projects" className="section">
-          <ProjectsSection />
-        </section>
-        <section id="skills" className="section">
-          <SkillsSection />
-        </section>
-        <section id="education" className="section">
-          <EducationSection />
-        </section>
-        <section id="certifications" className="section">
-          <CertificationsSection />
-        </section>
-        <section id="gallery" className="section">
-          <GallerySection />
-        </section>
-        <section id="contact" className="section">
-          <ContactSection />
-        </section>
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+        <Navbar />
+        <main className="pt-16">
+          <section id="home" className="section">
+            <HeroSection />
+          </section>
+          <section id="about" className="section">
+            <AboutSection />
+          </section>
+          <section id="experience" className="section">
+            <ExperienceSection />
+          </section>
+          <section id="projects" className="section">
+            <ProjectsSection />
+          </section>
+          <section id="skills" className="section">
+            <SkillsSection />
+          </section>
+          <section id="education" className="section">
+            <EducationSection />
+          </section>
+          <section id="certifications" className="section">
+            <CertificationsSection />
+          </section>
+          <section id="gallery" className="section">
+            <GallerySection />
+          </section>
+          <section id="contact" className="section">
+            <ContactSection />
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
-};
+}
 
 export default App;

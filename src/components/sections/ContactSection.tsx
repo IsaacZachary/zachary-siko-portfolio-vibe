@@ -1,120 +1,86 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { User, Mail, Linkedin, Phone, MapPin } from "lucide-react";
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-gray-900">Contact & References</h2>
-          <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="bg-white border border-gray-200 shadow-sm">
-            <CardHeader className="pb-2">
-              <h3 className="text-2xl font-bold font-display text-gray-900">Get In Touch</h3>
-            </CardHeader>
-            <CardContent>
+    <section className="py-20 bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Get in Touch
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Contact Information</h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <User size={20} className="text-primary" />
-                  <div>
-                    <p className="font-medium text-gray-900">Isaac Siko Zachary</p>
-                    <p className="text-gray-500 text-sm">P.O. Box 00521-00100, Embakasi, Nairobi, Kenya</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Mail size={20} className="text-primary" />
-                  <a href="mailto:isaaczachary18@gmail.com" className="text-gray-700 hover:text-primary">
-                    isaaczachary18@gmail.com
+                <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                  <Mail className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <a href="mailto:isaaczachary@gmail.com" className="hover:text-green-600 dark:hover:text-green-400">
+                    isaaczachary@gmail.com
                   </a>
                 </div>
-                
-                <div className="flex items-center gap-3">
-                  <Phone size={20} className="text-primary" />
-                  <div className="text-gray-700">
-                    <p>+254759325915</p>
-                    <p>+254101029951</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Linkedin size={20} className="text-primary" />
-                  <a 
-                    href="https://www.linkedin.com/in/isaaczachary" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-700 hover:text-primary"
-                  >
-                    linkedin.com/in/isaaczachary
+                <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                  <Phone className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <a href="tel:+254712345678" className="hover:text-green-600 dark:hover:text-green-400">
+                    +254 712 345 678
                   </a>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white border border-gray-200 shadow-sm">
-            <CardHeader className="pb-2">
-              <h3 className="text-2xl font-bold font-display text-gray-900">References</h3>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900">Mr. Micah Gesimba</h4>
-                  <p className="text-gray-700">Technical Manager, SSL Security Ltd</p>
-                  <div className="flex items-center gap-2 mt-2 text-gray-500">
-                    <Phone size={16} />
-                    <span>+254 725 028 203</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Mail size={16} />
-                    <span>mikegesimba1@gmail.com</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900">Mr. Samson Asimeto</h4>
-                  <p className="text-gray-700">Senior Instructor, DEFTEC</p>
-                  <div className="flex items-center gap-2 mt-2 text-gray-500">
-                    <Phone size={16} />
-                    <span>+254724302212</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Mail size={16} />
-                    <span>asimetoengineering@gmail.com</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900">Dr. Tinega Haron</h4>
-                  <p className="text-gray-700">Lecturer, KCA University</p>
-                  <div className="flex items-center gap-2 mt-2 text-gray-500">
-                    <Phone size={16} />
-                    <span>+254 718 622 709</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Mail size={16} />
-                    <span>htinega@kcau.ac.ke</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-gray-900">Mr. Boniface Ogoro</h4>
-                  <p className="text-gray-700">Manager, Humble Crib Investment</p>
-                  <div className="flex items-center gap-2 mt-2 text-gray-500">
-                    <Phone size={16} />
-                    <span>+1 (201) 744-4406</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-500">
-                    <Mail size={16} />
-                    <span>ogoro5874@gmail.com</span>
-                  </div>
+                <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                  <MapPin className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <span>Nairobi, Kenya</span>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Connect with Me</h3>
+              <div className="flex gap-4">
+                <a
+                  href="https://linkedin.com/in/isaaczachary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://github.com/isaaczachary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
+                >
+                  <Github className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://twitter.com/isaaczachary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
+                >
+                  <Twitter className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative">
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <img
+                src="/lovable-uploads/contact-image.jpg"
+                alt="Contact"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-2xl font-bold mb-2">Let's Work Together</h3>
+                <p className="text-white/80">
+                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

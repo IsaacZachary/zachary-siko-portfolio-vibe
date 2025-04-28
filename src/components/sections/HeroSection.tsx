@@ -63,7 +63,8 @@ const HeroSection = () => {
               <span className="block font-mono text-green-600">{'>'} Isaac Zachary</span>
             </h1>
             <div className="font-mono text-xl md:text-2xl mb-6 text-green-600 h-8">
-              <span>{'>'} </span><span className="typing-cursor">{terminalText}</span>
+              <span>{'>'} </span>
+              <span className="typing-cursor">{terminalText}</span>
             </div>
             <p className="text-base md:text-lg text-gray-700 mb-8 font-mono">
               <span className="text-blue-500">~/skills $</span> Results-driven IT Support and Security Systems Technician with expertise in CCTV systems, 
