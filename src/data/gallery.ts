@@ -99,5 +99,10 @@ export const gallery = [
     url: "/lovable-uploads/cdae3d3b-7e8c-4f5f-8384-5c1e7b073559.png",
     category: "professional",
     description: "Car selfie with denim jacket"
+  },
+  {
+    url: "/lovable-uploads/49563804-5552-4831-b2e5-7bcf705dbcc7.png",
+    category: "social",
+    description: "Casual portrait with white cap"
   }
 ];
