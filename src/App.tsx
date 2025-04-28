@@ -11,7 +11,7 @@ import GallerySection from './components/sections/GallerySection';
 import ContactSection from './components/sections/ContactSection';
 import Footer from './components/layout/Footer';
 import { ThemeProvider } from './context/ThemeContext';
-import './styles/App.css';
+import './styles/globals.css';
 
 declare global {
   namespace JSX {
@@ -27,7 +27,7 @@ declare global {
 function App(): React.ReactElement {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+      <div className="min-h-screen bg-background text-foreground">
         <Navbar />
         <main className="pt-16">
           <section id="home" className="section">
