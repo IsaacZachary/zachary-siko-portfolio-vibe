@@ -1,5 +1,4 @@
-import React from 'react';
-import TechStack from './TechStack';
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -50,59 +49,91 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-          Technical Skills
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Frontend Development</h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              <li>• React.js & Next.js</li>
-              <li>• TypeScript & JavaScript</li>
-              <li>• HTML5 & CSS3</li>
-              <li>• Tailwind CSS</li>
-              <li>• Responsive Design</li>
-            </ul>
+    <section id="skills" className="py-20">
+      <div className="container">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Skills & Interests</h2>
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div>
+            <h3 className="text-xl font-bold mb-6 flex items-center font-display">
+              <Code size={24} className="mr-2 text-tech-primary" />
+              Development Skills
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {technicalSkills.development.map((skill, index) => (
+                <Badge key={index} variant="outline" className="text-sm px-3 py-1 bg-muted/50">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            
+            <h3 className="text-xl font-bold mb-6 mt-8 flex items-center font-display">
+              <Server size={24} className="mr-2 text-tech-primary" />
+              Networking Skills
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {technicalSkills.networking.map((skill, index) => (
+                <Badge key={index} variant="outline" className="text-sm px-3 py-1 bg-muted/50">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            
+            <h3 className="text-xl font-bold mb-6 mt-8 flex items-center font-display">
+              <Shield size={24} className="mr-2 text-tech-primary" />
+              Security Systems Skills
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {technicalSkills.security.map((skill, index) => (
+                <Badge key={index} variant="outline" className="text-sm px-3 py-1 bg-muted/50">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
           </div>
           
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Backend Development</h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              <li>• Node.js</li>
-              <li>• Python</li>
-              <li>• RESTful APIs</li>
-              <li>• MongoDB</li>
-              <li>• SQL Databases</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">DevOps & Tools</h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              <li>• Git & GitHub</li>
-              <li>• Docker</li>
-              <li>• CI/CD</li>
-              <li>• AWS</li>
-              <li>• Linux</li>
-            </ul>
-          </div>
-          
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Security & Networking</h3>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              <li>• Network Security</li>
-              <li>• CCTV Systems</li>
-              <li>• Firewall Configuration</li>
-              <li>• VPN Setup</li>
-              <li>• Security Auditing</li>
-            </ul>
+          <div>
+            <h3 className="text-xl font-bold mb-6 flex items-center font-display">
+              <Users size={24} className="mr-2 text-tech-accent" />
+              Support Skills
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {technicalSkills.support.map((skill, index) => (
+                <Badge key={index} variant="outline" className="text-sm px-3 py-1 bg-muted/50">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            
+            <h3 className="text-xl font-bold mb-6 mt-8 flex items-center font-display">
+              <Palette size={24} className="mr-2 text-tech-accent" />
+              Creative Skills
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {technicalSkills.creative.map((skill, index) => (
+                <Badge key={index} variant="outline" className="text-sm px-3 py-1 bg-muted/50">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+            
+            <h3 className="text-xl font-bold mb-6 mt-8 flex items-center font-display">
+              <Headphones size={24} className="mr-2 text-tech-accent" />
+              Hobbies & Interests
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {hobbies.map((hobby, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  {hobby.icon}
+                  <span>{hobby.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        
-        <TechStack />
       </div>
     </section>
   );
