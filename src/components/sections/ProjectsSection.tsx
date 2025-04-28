@@ -1,4 +1,3 @@
-
 import { Code, ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -79,19 +78,10 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 relative">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70">
-        <img 
-          src="/lovable-uploads/7b206c01-fa6b-400f-b455-ac517ea4d77c.png" 
-          alt="Isaac Zachary" 
-          className="w-full h-full object-cover mix-blend-overlay opacity-60" 
-        />
-      </div>
-      
-      <div className="container max-w-6xl mx-auto px-4 relative z-10">
+    <section id="projects" className="py-20 relative bg-white">
+      <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-white flex items-center justify-center gap-2">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-gray-900 flex items-center justify-center gap-2">
             <Code className="text-tech-accent" size={32} />
             Featured Projects
           </h2>
@@ -100,17 +90,17 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.slice(0, visibleProjects).map((project, index) => (
-            <Card key={index} className="group bg-black/50 backdrop-blur-sm border border-white/10 hover:border-tech-accent/50 transition-all duration-300 shadow-xl overflow-hidden">
+            <Card key={index} className="group bg-white border border-gray-200 hover:border-tech-accent/50 transition-all duration-300 shadow-sm overflow-hidden">
               <CardHeader className="p-6 pb-3">
-                <h3 className="font-bold text-xl text-white group-hover:text-tech-accent transition-colors">
+                <h3 className="font-bold text-xl text-gray-900 group-hover:text-tech-accent transition-colors">
                   {project.title}
                 </h3>
               </CardHeader>
-              <CardContent className="p-6 pt-3 text-gray-300">
+              <CardContent className="p-6 pt-3 text-gray-700">
                 <p className="mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {project.technologies.map((tech, idx) => (
-                    <Badge key={idx} variant="outline" className="bg-black/50 text-gray-200 border-gray-500">
+                    <Badge key={idx} variant="outline" className="bg-gray-100 text-gray-700 border-gray-300">
                       {tech}
                     </Badge>
                   ))}

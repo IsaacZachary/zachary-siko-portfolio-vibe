@@ -1,7 +1,5 @@
-
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CalendarDays, Briefcase } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -20,7 +18,7 @@ const ExperienceSection = () => {
     {
       title: "Learner Support Volunteer (Remote)",
       company: "Power Learn Project Academy (PLP)",
-      location: "",
+      location: "Remote",
       period: "Mar 2025 – Present",
       responsibilities: [
         "Assisting with technical support tickets, project code reviews, and mentorship."
@@ -35,7 +33,7 @@ const ExperienceSection = () => {
         "Provided IT solutions including software deployment, system maintenance, Service delivery and IT consulting.",
         "Installed, configured, and maintained CCTV surveillance systems.",
         "Trained clients on basic computer use, performed inventory and financial management.",
-        "Installation and configuration of operating systems (Windows/Linux) and other productive software"
+        "Installation and configuration of operating systems (Windows/Linux) and other productive software."
       ]
     },
     {
@@ -46,7 +44,7 @@ const ExperienceSection = () => {
       responsibilities: [
         "Handled daily sales and service delivery using cloud-based financial tracking (Google Sheets).",
         "Ensuring good client relations and efficient service delivery.",
-        "Network security and CCTV management"
+        "Network security and CCTV management."
       ]
     },
     {
@@ -70,48 +68,37 @@ const ExperienceSection = () => {
         "Installed and configured CCTV surveillance systems for various clients.",
         "Integrated automated electric fences, access control, and IP monitoring systems.",
         "Conducted system troubleshooting, preventive maintenance, ensuring 99.9% system uptime and user training on installation and troubleshooting.",
-        "Assisted in programming and calibration of automated security machines"
+        "Assisted in programming and calibration of automated security machines."
       ]
     }
   ];
 
-  const attachment = {
-    title: "IT/Software Support and Network Administration Intern",
-    company: "Defense Forces Technical College",
-    location: "Nairobi, Kenya",
-    period: "May 2023 – Aug 2023",
-    responsibilities: [
-      "Involved in general IT support, CRUD App development, server administration, troubleshooting, and research.",
-      "Project: IT Workshop Computer Maintenance System (Laravel)"
-    ]
-  };
-
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 bg-white">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Professional Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-gray-900">Professional Experience</h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <Card key={index} className="overflow-hidden">
-              <CardHeader className="bg-muted/50 flex flex-col md:flex-row justify-between items-start md:items-center p-6">
+            <Card key={index} className="shadow-sm border border-gray-200">
+              <CardHeader className="bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center p-6">
                 <div>
-                  <h3 className="text-xl font-bold">{exp.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{exp.title}</h3>
                   <p className="text-primary font-semibold">{exp.company}</p>
-                  {exp.location && <p className="text-muted-foreground">{exp.location}</p>}
+                  {exp.location && <p className="text-gray-500">{exp.location}</p>}
                 </div>
                 <div className="flex items-center mt-2 md:mt-0">
-                  <CalendarDays size={16} className="text-muted-foreground mr-2" />
-                  <span className="text-muted-foreground">{exp.period}</span>
+                  <CalendarDays size={16} className="text-gray-500 mr-2" />
+                  <span className="text-gray-500">{exp.period}</span>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
                 <ul className="space-y-2">
                   {exp.responsibilities.map((resp, i) => (
-                    <li key={i} className="flex items-start">
+                    <li key={i} className="flex items-start text-gray-700">
                       <span className="text-primary mr-2">•</span>
                       <span>{resp}</span>
                     </li>
@@ -120,33 +107,6 @@ const ExperienceSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold mb-8 text-center font-display">Industrial Attachment</h3>
-          <Card>
-            <CardHeader className="bg-muted/50 flex flex-col md:flex-row justify-between items-start md:items-center p-6">
-              <div>
-                <h3 className="text-xl font-bold">{attachment.title}</h3>
-                <p className="text-primary font-semibold">{attachment.company}</p>
-                <p className="text-muted-foreground">{attachment.location}</p>
-              </div>
-              <div className="flex items-center mt-2 md:mt-0">
-                <CalendarDays size={16} className="text-muted-foreground mr-2" />
-                <span className="text-muted-foreground">{attachment.period}</span>
-              </div>
-            </CardHeader>
-            <CardContent className="p-6">
-              <ul className="space-y-2">
-                {attachment.responsibilities.map((resp, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="text-primary mr-2">•</span>
-                    <span>{resp}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
