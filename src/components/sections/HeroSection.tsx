@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -57,11 +56,11 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={`mt-10 md:mt-0 md:ml-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden rounded-full border-4 border-tech-primary/30 shadow-2xl">
+          <div className="relative w-72 h-72 md:w-96 md:h-96">
             <img 
-              src="/lovable-uploads/7b206c01-fa6b-400f-b455-ac517ea4d77c.png" 
+              src="/lovable-uploads/c1a03f43-81ad-4aa8-95f6-d97ffa8d50d4.png"
               alt="Isaac Zachary" 
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              className="w-full h-full object-cover shadow-2xl rounded-lg hover:scale-105 transition-transform duration-500" 
             />
           </div>
         </div>
