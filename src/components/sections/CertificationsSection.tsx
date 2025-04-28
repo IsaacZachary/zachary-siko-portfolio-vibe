@@ -32,10 +32,22 @@ const certifications: Certification[] = [
     skills: ["Django", "Tailwind CSS", "JavaScript", "PostgreSQL"],
   },
   {
+    title: "Analyzing and Visualizing Data with Microsoft Power BI",
+    issuer: "MindLuster",
+    date: "Feb 2024",
+    skills: ["Ms Power BI", "Data Analysis"],
+  },
+  {
     title: "Website Development Beginners to Advanced",
     issuer: "AQskill",
     date: "Feb 2024",
     skills: ["WordPress", "Web Development", "SEO"],
+  },
+  {
+    title: "Sage50 and QuickBooks Accounting Software",
+    issuer: "AQskill",
+    date: "Jan 2024",
+    skills: ["Financial Accounting", "QuickBooks", "Sage50"],
   },
   {
     title: "BSc. Software Development",
@@ -48,6 +60,18 @@ const certifications: Certification[] = [
     issuer: "AQskill",
     date: "Jul 2023",
     skills: ["Artificial Intelligence", "GPT", "Prompt Engineering"],
+  },
+  {
+    title: "IT for Business Success",
+    issuer: "HP Life",
+    date: "May 2023",
+    skills: ["IT Operations", "Business Success", "Automation"],
+  },
+  {
+    title: "Frontend Fundamentals",
+    issuer: "PIRPLE.COM",
+    date: "May 2020",
+    skills: ["HTML", "CSS", "Web Design"],
   },
 ];
 
