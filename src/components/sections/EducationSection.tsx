@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { CalendarDays, GraduationCap, Award } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -46,33 +45,33 @@ const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-muted/50">
+    <section id="education" className="py-20 bg-white">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">Education</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-gray-900">Education</h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
         </div>
 
         <div className="space-y-8">
           {educations.map((edu, index) => (
-            <Card key={index}>
+            <Card key={index} className="shadow-sm border border-gray-200">
               <CardHeader className="flex flex-col md:flex-row justify-between items-start md:items-center p-6">
                 <div className="flex items-start gap-4">
                   <GraduationCap size={24} className="text-primary mt-1" />
                   <div>
-                    <h3 className="text-xl font-bold">{edu.institution}</h3>
+                    <h3 className="text-xl font-bold text-gray-900">{edu.institution}</h3>
                     <p className="text-primary font-medium">{edu.degree}</p>
                   </div>
                 </div>
                 <div className="flex items-center mt-4 md:mt-0">
-                  <CalendarDays size={16} className="text-muted-foreground mr-2" />
-                  <span className="text-muted-foreground">{edu.period}</span>
+                  <CalendarDays size={16} className="text-gray-500 mr-2" />
+                  <span className="text-gray-500">{edu.period}</span>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
                 <ul className="space-y-2">
                   {edu.details.map((detail, i) => (
-                    <li key={i} className="flex items-start">
+                    <li key={i} className="flex items-start text-gray-700">
                       <span className="text-primary mr-2">•</span>
                       <span>{detail}</span>
                     </li>

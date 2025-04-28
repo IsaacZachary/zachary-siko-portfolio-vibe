@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, Monitor, Shield, Server, Users, Palette } from "lucide-react";
 
@@ -37,17 +36,17 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/50">
+    <section id="about" className="py-20 bg-white">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-display text-gray-900">About Me</h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
         </div>
 
         <div className="mb-12 max-w-3xl mx-auto">
-          <Card>
+          <Card className="shadow-sm border border-gray-200">
             <CardContent className="p-6">
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed text-gray-700">
                 Results-driven IT Support and Security Systems Technician with 4+ years of professional experience 
                 specializing in CCTV systems, IT support, network administration, client/server configurations, 
                 and customer service support. Strong troubleshooting, documentation, and integration skills. 
@@ -58,16 +57,16 @@ const AboutSection = () => {
           </Card>
         </div>
 
-        <h3 className="text-2xl font-bold text-center mb-8 font-display">Core Skills & Technical Competencies</h3>
+        <h3 className="text-2xl font-bold text-center mb-8 font-display text-gray-900">Core Skills & Technical Competencies</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {coreCompetencies.map((item, index) => (
-            <Card key={index} className="overflow-hidden border-l-4 border-l-primary">
+            <Card key={index} className="overflow-hidden border-l-4 border-l-primary shadow-sm">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="mt-1">{item.icon}</div>
                   <div>
-                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <h4 className="font-bold text-lg mb-2 text-gray-900">{item.title}</h4>
+                    <p className="text-gray-700">{item.description}</p>
                   </div>
                 </div>
               </CardContent>
